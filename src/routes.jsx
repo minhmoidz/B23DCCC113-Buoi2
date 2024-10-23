@@ -1,17 +1,25 @@
 import React from 'react';
-import { useRoutes } from 'react-router-dom';
-import ProductList from './components/ProductList';
-import AddProduct from './components/AddProduct';
-import EditProduct from './components/EditProduct';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from '../src/components/Navbar';
+import ProductList from '../src/components/ProductList';
+import AddProduct from '../src/components/AddProduct';
+import EditProduct from '../src/components/EditProduct';
+import Guide from '../src/components/Guide.jsx'; // Tạo component cho Hướng Dẫn
 
-const AppRoutes = () => {
-    let routes = useRoutes([
-        { path: "/", element: <ProductList /> },
-        { path: "/add-product", element: <AddProduct /> },
-        { path: "/edit-product/:id", element: <EditProduct /> }
-    ]);
-
-    return routes;
+const App = () => {
+    return (
+        <Router>
+            <Navbar />
+            <div className="container">
+                <Routes>
+                    <Route path="/" element={<ProductList />} />
+                    <Route path="/add-product" element={<AddProduct />} />
+                    <Route path="/edit-product/:id" element={<EditProduct />} />
+                    <Route path="/guide" element={<Guide />} /> {/* Component Hướng Dẫn */}
+                </Routes>
+            </div>
+        </Router>
+    );
 };
 
-export default AppRoutes;
+export default App;

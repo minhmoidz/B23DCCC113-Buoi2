@@ -1,0 +1,31 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #007bff; /* Màu nền của Navbar */
+    color: white; /* Màu chữ */
+}
+
+.navbar-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style-type: none; /* Xóa dấu chấm của danh sách */
+    display: flex;
+    gap: 15px; /* Khoảng cách giữa các mục */
+}
+
+.navbar-item {
+    color: white; /* Màu chữ */
+    text-decoration: none; /* Bỏ gạch chân */
+    padding: 8px 15px;
+    border-radius: 5px; /* Đặt góc tròn cho nút */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền khi hover */
+}
+
+.navbar-item:hover {
+    background-color: #0056b3; /* Đổi màu nền khi hover */
+}
